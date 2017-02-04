@@ -16,9 +16,9 @@
 @property (strong, nonatomic) NSString *server;
 @property (strong, nonatomic) NSString *farm;
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *ispublic;
-@property (strong, nonatomic) NSString *isfriend;
-@property (strong, nonatomic) NSString *isfamily;
+@property (assign, nonatomic) BOOL ispublic;
+@property (assign, nonatomic) BOOL isfriend;
+@property (assign, nonatomic) BOOL isfamily;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 

@@ -32,11 +32,11 @@
     
     self.title = [attributes valueForKey:@"title"];
     
-    self.ispublic = [attributes valueForKey:@"ispublic"];
+    self.ispublic = [[attributes valueForKey:@"ispublic"] boolValue];
     
-    self.isfriend = [attributes valueForKey:@"isfriend"];
+    self.isfriend = [[attributes valueForKey:@"isfriend"] boolValue];
     
-    self.isfamily = [attributes valueForKey:@"isfamily"];
+    self.isfamily = [[attributes valueForKey:@"isfamily"] boolValue];
     
     return self;
     
