@@ -205,7 +205,7 @@
             
         }];
         
-        cell.lblPhotoTitle.text = [StringOperations decodeUTF8String:photo.title];
+        cell.lblPhotoTitle.text = photo.title;
         
         return cell;
         

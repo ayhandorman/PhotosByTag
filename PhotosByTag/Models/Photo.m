@@ -7,6 +7,7 @@
 //
 
 #import "Photo.h"
+#import "StringOperations.h"
 
 @implementation Photo
 
@@ -30,7 +31,7 @@
     
     self.farm = [attributes valueForKey:@"farm"];
     
-    self.title = [attributes valueForKey:@"title"];
+    self.title = [StringOperations decodeUTF8String:[attributes valueForKey:@"title"]];
     
     self.ispublic = [[attributes valueForKey:@"ispublic"] boolValue];
     
