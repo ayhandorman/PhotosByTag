@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>FlickrRestServiceUrl</key>
-	<string>api.flickr.com/services/rest</string>
+	<string>api.flickr.com</string>
 	<key>FlickrPhotoUrlFormat</key>
 	<string>https://farm%@.staticflickr.com/%@/%@_%@%@.jpg </string>
 	<key>FlickrRestServiceUrlFormat</key>

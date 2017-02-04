@@ -72,9 +72,7 @@
     
     __weak typeof(self) weakSelf = self;
     
-    NSLog(@"flickrRestServiceUrl: %@", flickrRestServiceUrl);
-    
-    Reachability *reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    Reachability *reach = [Reachability reachabilityWithHostname:flickrRestServiceUrl];
     
     // service is available
     reach.reachableBlock = ^(Reachability *reach)
