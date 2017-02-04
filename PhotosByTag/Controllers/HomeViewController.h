@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorLoading;
 @property (strong, nonatomic) IBOutlet UITableView *tablePhotos;

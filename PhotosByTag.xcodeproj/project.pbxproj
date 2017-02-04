@@ -16,6 +16,12 @@
 		FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7D1E463059000E7742 /* PhotoCell.m */; };
 		FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB801E46343A000E7742 /* HomeViewController.m */; };
 		FA6FFB841E4634CF000E7742 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB831E4634CF000E7742 /* Photo.m */; };
+		FA6FFB881E464544000E7742 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB871E464544000E7742 /* ImageCache.m */; };
+		FA6FFB8B1E464A6C000E7742 /* StringOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB8A1E464A6C000E7742 /* StringOperations.m */; };
+		FA6FFB8D1E465719000E7742 /* ErrorCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB8C1E465719000E7742 /* ErrorCodes.plist */; };
+		FA6FFB901E465B1E000E7742 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB921E465B1E000E7742 /* Localizable.strings */; };
+		FA6FFB991E465C27000E7742 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB981E465C27000E7742 /* Reachability.m */; };
+		FA6FFB9C1E46642E000E7742 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,15 @@
 		FA6FFB801E46343A000E7742 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		FA6FFB821E4634CF000E7742 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		FA6FFB831E4634CF000E7742 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		FA6FFB861E464544000E7742 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		FA6FFB871E464544000E7742 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
+		FA6FFB891E464A6C000E7742 /* StringOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringOperations.h; sourceTree = "<group>"; };
+		FA6FFB8A1E464A6C000E7742 /* StringOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringOperations.m; sourceTree = "<group>"; };
+		FA6FFB8C1E465719000E7742 /* ErrorCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ErrorCodes.plist; sourceTree = "<group>"; };
+		FA6FFB961E465BD4000E7742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA6FFB971E465C27000E7742 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FA6FFB981E465C27000E7742 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6FFB9C1E46642E000E7742 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +69,7 @@
 			children = (
 				FA6FFB5C1E460BD0000E7742 /* PhotosByTag */,
 				FA6FFB5B1E460BD0000E7742 /* Products */,
+				FA6FFB9A1E46642E000E7742 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,12 +87,15 @@
 				FA6FFB761E46286C000E7742 /* Models */,
 				FA6FFB771E46286C000E7742 /* Views */,
 				FA6FFB751E46286C000E7742 /* Controllers */,
+				FA6FFB851E464537000E7742 /* Helpers */,
 				FA6FFB781E462972000E7742 /* PhotoAPI */,
 				FA6FFB601E460BD0000E7742 /* AppDelegate.h */,
 				FA6FFB611E460BD0000E7742 /* AppDelegate.m */,
 				FA6FFB661E460BD1000E7742 /* Main.storyboard */,
 				FA6FFB691E460BD1000E7742 /* Assets.xcassets */,
 				FA6FFB6B1E460BD1000E7742 /* LaunchScreen.storyboard */,
+				FA6FFB921E465B1E000E7742 /* Localizable.strings */,
+				FA6FFB8C1E465719000E7742 /* ErrorCodes.plist */,
 				FA6FFB6E1E460BD1000E7742 /* Info.plist */,
 				FA6FFB5D1E460BD0000E7742 /* Supporting Files */,
 			);
@@ -124,6 +144,27 @@
 				FA6FFB7A1E462992000E7742 /* PhotoAPI.m */,
 			);
 			path = PhotoAPI;
+			sourceTree = "<group>";
+		};
+		FA6FFB851E464537000E7742 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA6FFB971E465C27000E7742 /* Reachability.h */,
+				FA6FFB981E465C27000E7742 /* Reachability.m */,
+				FA6FFB861E464544000E7742 /* ImageCache.h */,
+				FA6FFB871E464544000E7742 /* ImageCache.m */,
+				FA6FFB891E464A6C000E7742 /* StringOperations.h */,
+				FA6FFB8A1E464A6C000E7742 /* StringOperations.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA6FFB9A1E46642E000E7742 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6FFB901E465B1E000E7742 /* Localizable.strings in Resources */,
 				FA6FFB6D1E460BD1000E7742 /* LaunchScreen.storyboard in Resources */,
+				FA6FFB8D1E465719000E7742 /* ErrorCodes.plist in Resources */,
 				FA6FFB6A1E460BD1000E7742 /* Assets.xcassets in Resources */,
 				FA6FFB681E460BD1000E7742 /* Main.storyboard in Resources */,
 			);
@@ -198,12 +241,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6FFB8B1E464A6C000E7742 /* StringOperations.m in Sources */,
 				FA6FFB841E4634CF000E7742 /* Photo.m in Sources */,
 				FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */,
 				FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */,
 				FA6FFB621E460BD0000E7742 /* AppDelegate.m in Sources */,
 				FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */,
 				FA6FFB5F1E460BD0000E7742 /* main.m in Sources */,
+				FA6FFB991E465C27000E7742 /* Reachability.m in Sources */,
+				FA6FFB881E464544000E7742 /* ImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +270,14 @@
 				FA6FFB6C1E460BD1000E7742 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA6FFB921E465B1E000E7742 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA6FFB961E465BD4000E7742 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -7,8 +7,24 @@
 //
 
 #import "HomeViewController.h"
+#import "Reachability.h"
+#import "ImageCache.h"
+#import "StringOperations.h"
+#import "PhotoCell.h"
+#import "PhotoAPI.h"
 
 @interface HomeViewController ()
+{
+    
+    NSString *flickrRestServiceUrl;
+
+    NSString *flickrPhotoUrlFormat;
+
+    NSMutableArray *photoList;
+    
+    int currentPageNo;
+    
+}
 
 @end
 
@@ -23,14 +39,191 @@
 }
 
 
-- (void)viewDidLoad {
+- (void)setDefaults
+{
     
-    [super viewDidLoad];
+    flickrRestServiceUrl = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FlickrRestServiceUrl"];
+
+    flickrPhotoUrlFormat = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"FlickrPhotoUrlFormat"];
+    
+    photoList = [[NSMutableArray alloc] init];
+    
+    currentPageNo = 1;
     
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)viewDidLoad
+{
+    
+    [super viewDidLoad];
+    
+    [self setDefaults];
+    
+    [self performSelector:@selector(testInternetConnection) withObject:nil afterDelay:.1];
+    
+}
+
+
+- (void)testInternetConnection
+{
+    
+    // <checks if the service is available>
+    
+    __weak typeof(self) weakSelf = self;
+    
+    NSLog(@"flickrRestServiceUrl: %@", flickrRestServiceUrl);
+    
+    Reachability *reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // service is available
+    reach.reachableBlock = ^(Reachability *reach)
+    {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [weakSelf getPhotos];
+            
+        });
+        
+    };
+    
+    // service is unavailable
+    reach.unreachableBlock = ^(Reachability*reach)
+    {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:NSLocalizedString(@"error", nil)
+                                        message:NSLocalizedString(@"service_unavailable", nil)
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *ok = [UIAlertAction
+                                 actionWithTitle:NSLocalizedString(@"ok", nil)
+                                 style:UIAlertActionStyleDefault
+                                 handler:nil];
+            
+            [alert addAction:ok];
+            
+            [weakSelf presentViewController:alert animated:YES completion:nil];
+            
+        });
+        
+    };
+    
+    [reach startNotifier];
+    
+    // </checks if the service is available>
+    
+}
+
+
+- (void)getPhotos
+{
+    
+    // <queries photos by specified tag>
+    
+    [self.indicatorLoading startAnimating];
+    
+    [PhotoAPI photosByTag:^(NSArray *photos) {
+        
+        photoList = [photos copy];
+        
+        [self.tablePhotos reloadData];
+        
+        [self.indicatorLoading stopAnimating];
+        
+    } failure:^(NSError *error) {
+        
+        [self.indicatorLoading stopAnimating];
+        
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:NSLocalizedString(@"error", nil)
+                                    message:error.localizedDescription
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *ok = [UIAlertAction
+                             actionWithTitle:NSLocalizedString(@"ok", nil)
+                             style:UIAlertActionStyleDefault
+                             handler:nil];
+        
+        [alert addAction:ok];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    } tag: @"moda"];
+    
+    // </queries photos by specified tag>
+    
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    if (tableView == self.tablePhotos)
+    {
+        
+        return photoList.count;
+        
+    }
+    else
+    {
+        
+        return 0;
+        
+    }
+    
+}
+
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (tableView == self.tablePhotos)
+    {
+        
+        static NSString *cellIdentifier = @"cellPhoto";
+        
+        PhotoCell *cell = (PhotoCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+        
+        if (cell == nil) cell = [[PhotoCell alloc] init];
+        
+        Photo *photo = [photoList objectAtIndex:indexPath.row];
+        
+        NSString *photoUrl = [NSString stringWithFormat:flickrPhotoUrlFormat, photo.farm, photo.server, photo.id, photo.secret, @"_q"];
+        
+        cell.imgPhotoPreview.image = nil;
+        
+        // checking for a cached version of the image to list
+        [ImageCache loadImage:photoUrl complete:^(UIImage *image) {
+            
+            cell.imgPhotoPreview.image = image;
+            
+            cell.imgPhotoPreview.layer.cornerRadius = 5;
+            
+            cell.imgPhotoPreview.layer.borderWidth = 0;
+            
+        }];
+        
+        cell.lblPhotoTitle.text = [StringOperations decodeUTF8String:photo.title];
+        
+        return cell;
+        
+    }
+    else
+    {
+        
+        return [UITableViewCell alloc];
+        
+    }
+    
+}
+
+
+- (void)didReceiveMemoryWarning
+{
     
     [super didReceiveMemoryWarning];
     
