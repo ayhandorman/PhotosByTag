@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		FA6FFB5F1E460BD0000E7742 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB5E1E460BD0000E7742 /* main.m */; };
 		FA6FFB621E460BD0000E7742 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB611E460BD0000E7742 /* AppDelegate.m */; };
-		FA6FFB651E460BD0000E7742 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB641E460BD0000E7742 /* HomeViewController.m */; };
 		FA6FFB681E460BD1000E7742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB661E460BD1000E7742 /* Main.storyboard */; };
 		FA6FFB6A1E460BD1000E7742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB691E460BD1000E7742 /* Assets.xcassets */; };
 		FA6FFB6D1E460BD1000E7742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB6B1E460BD1000E7742 /* LaunchScreen.storyboard */; };
 		FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7A1E462992000E7742 /* PhotoAPI.m */; };
 		FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7D1E463059000E7742 /* PhotoCell.m */; };
+		FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB801E46343A000E7742 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,6 @@
 		FA6FFB5E1E460BD0000E7742 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA6FFB601E460BD0000E7742 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA6FFB611E460BD0000E7742 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA6FFB631E460BD0000E7742 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
-		FA6FFB641E460BD0000E7742 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
 		FA6FFB671E460BD1000E7742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA6FFB691E460BD1000E7742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6FFB6C1E460BD1000E7742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +30,8 @@
 		FA6FFB7A1E462992000E7742 /* PhotoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAPI.m; sourceTree = "<group>"; };
 		FA6FFB7C1E463059000E7742 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		FA6FFB7D1E463059000E7742 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		FA6FFB7F1E46343A000E7742 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		FA6FFB801E46343A000E7742 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 		FA6FFB751E46286C000E7742 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA6FFB631E460BD0000E7742 /* HomeViewController.h */,
-				FA6FFB641E460BD0000E7742 /* HomeViewController.m */,
+				FA6FFB7F1E46343A000E7742 /* HomeViewController.h */,
+				FA6FFB801E46343A000E7742 /* HomeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,10 +193,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6FFB651E460BD0000E7742 /* HomeViewController.m in Sources */,
 				FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */,
 				FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */,
 				FA6FFB621E460BD0000E7742 /* AppDelegate.m in Sources */,
+				FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */,
 				FA6FFB5F1E460BD0000E7742 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
