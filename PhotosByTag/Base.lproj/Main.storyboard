@@ -26,12 +26,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fashion Related Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Nfy-Oh-Uxe" userLabel="lblTitle">
-                                        <rect key="frame" x="20" y="33" width="335" height="24"/>
+                                        <rect key="frame" x="20" y="33" width="300" height="24"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eJA-h9-9EB" userLabel="indicatorLoading">
+                                        <rect key="frame" x="335" y="35" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.32549019607843138" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -75,6 +79,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="indicatorLoading" destination="eJA-h9-9EB" id="xOT-dW-z4r"/>
                         <outlet property="tablePhotos" destination="8Bp-aC-9qA" id="jJm-Ut-1G2"/>
                     </connections>
                 </viewController>

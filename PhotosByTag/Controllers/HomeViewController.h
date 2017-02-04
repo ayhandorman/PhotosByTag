@@ -10,6 +10,7 @@
 
 @interface HomeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorLoading;
 @property (strong, nonatomic) IBOutlet UITableView *tablePhotos;
 
 @end
