@@ -14,6 +14,7 @@
 		FA6FFB6A1E460BD1000E7742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB691E460BD1000E7742 /* Assets.xcassets */; };
 		FA6FFB6D1E460BD1000E7742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB6B1E460BD1000E7742 /* LaunchScreen.storyboard */; };
 		FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7A1E462992000E7742 /* PhotoAPI.m */; };
+		FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7D1E463059000E7742 /* PhotoCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		FA6FFB6E1E460BD1000E7742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6FFB791E462992000E7742 /* PhotoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAPI.h; sourceTree = "<group>"; };
 		FA6FFB7A1E462992000E7742 /* PhotoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAPI.m; sourceTree = "<group>"; };
+		FA6FFB7C1E463059000E7742 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		FA6FFB7D1E463059000E7742 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 		FA6FFB771E46286C000E7742 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA6FFB7C1E463059000E7742 /* PhotoCell.h */,
+				FA6FFB7D1E463059000E7742 /* PhotoCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6FFB651E460BD0000E7742 /* HomeViewController.m in Sources */,
+				FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */,
 				FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */,
 				FA6FFB621E460BD0000E7742 /* AppDelegate.m in Sources */,
 				FA6FFB5F1E460BD0000E7742 /* main.m in Sources */,
