@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Photo.h"
 
 @interface PhotoAPI : NSObject
+
++ (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag;
 
 @end
