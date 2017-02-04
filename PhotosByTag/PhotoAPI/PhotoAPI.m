@@ -38,7 +38,7 @@ NSURLSessionDataTask *dataTask;
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString]];
     
-    [request setTimeoutInterval:60.0];
+    [request setTimeoutInterval:60.0]; 
     
     [request addValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
     
