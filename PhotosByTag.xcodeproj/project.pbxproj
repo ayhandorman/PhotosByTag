@@ -22,6 +22,7 @@
 		FA6FFB901E465B1E000E7742 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB921E465B1E000E7742 /* Localizable.strings */; };
 		FA6FFB991E465C27000E7742 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB981E465C27000E7742 /* Reachability.m */; };
 		FA6FFB9C1E46642E000E7742 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */; };
+		FA6FFB9F1E466EE9000E7742 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB9E1E466EE9000E7742 /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		FA6FFB971E465C27000E7742 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		FA6FFB981E465C27000E7742 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FA6FFB9D1E466EE9000E7742 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		FA6FFB9E1E466EE9000E7742 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				FA6FFB7F1E46343A000E7742 /* HomeViewController.h */,
 				FA6FFB801E46343A000E7742 /* HomeViewController.m */,
+				FA6FFB9D1E466EE9000E7742 /* PhotoViewController.h */,
+				FA6FFB9E1E466EE9000E7742 /* PhotoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				FA6FFB5F1E460BD0000E7742 /* main.m in Sources */,
 				FA6FFB991E465C27000E7742 /* Reachability.m in Sources */,
 				FA6FFB881E464544000E7742 /* ImageCache.m in Sources */,
+				FA6FFB9F1E466EE9000E7742 /* PhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
