@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "PhotoViewController.h"
 #import "Reachability.h"
 #import "ImageCache.h"
 #import "StringOperations.h"
@@ -216,6 +217,27 @@
         return [UITableViewCell alloc];
         
     }
+    
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (tableView == self.tablePhotos)
+    {
+        
+        PhotoViewController *pvc = (PhotoViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"viewPhoto"];
+        
+        pvc.photo = [photoList objectAtIndex:indexPath.row];
+        
+        pvc.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+        
+        [self presentViewController:pvc animated:YES completion:nil];
+        
+    }
+    
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:NO];
     
 }
 
