@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FlickrRestServiceUrl</key>
+	<string>api.flickr.com/services/rest</string>
+	<key>FlickrPhotoUrlFormat</key>
+	<string>https://farm%@.staticflickr.com/%@/%@_%@%@.jpg </string>
 	<key>FlickrRestServiceUrlFormat</key>
 	<string>https://api.flickr.com/services/rest/?method=%@&amp;format=json&amp;api_key=%@&amp;tags=%@&amp;nojsoncallback=?</string>
 	<key>FlickrAppName</key>
