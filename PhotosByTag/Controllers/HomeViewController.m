@@ -12,7 +12,7 @@
 #import "ImageCache.h"
 #import "StringOperations.h"
 #import "PhotoCell.h"
-#import "PhotoAPI.h"
+#import "Flickr.h"
 
 @interface HomeViewController ()
 {
@@ -125,7 +125,9 @@
     
     [self.indicatorLoading startAnimating];
     
-    [PhotoAPI photosByTag:^(NSArray *photos) {
+    id <PhotoAPI> photoAPI = [[Flickr alloc] init];
+    
+    [photoAPI photosByTag:^(NSArray *photos) {
         
         photoList = [photos copy];
         
@@ -151,7 +153,7 @@
         
         [self presentViewController:alert animated:YES completion:nil];
         
-    } tag: @"moda"];
+    } tag:@"moda"];
     
     // </queries photos by specified tag>
     

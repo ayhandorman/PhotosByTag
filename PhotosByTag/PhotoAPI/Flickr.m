@@ -6,9 +6,9 @@
 //  Copyright © 2017 Modanisa. All rights reserved.
 //
 
-#import "PhotoAPI.h"
+#import "Flickr.h"
 
-@implementation PhotoAPI
+@implementation Flickr
 
 static NSString *flickrRestServiceUrlFormat;
 
@@ -31,7 +31,7 @@ NSURLSessionDataTask *dataTask;
 }
 
 
-+ (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag
+- (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag
 {
     
     NSString *urlString = [NSString stringWithFormat:flickrRestServiceUrlFormat, @"flickr.photos.search", flickrAPIKey, tag];

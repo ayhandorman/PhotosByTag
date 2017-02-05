@@ -1,16 +1,16 @@
 //
-//  PhotoAPI.h
+//  TheAPI.h
 //  PhotosByTag
 //
-//  Created by Ayhan Dorman on 04/02/2017.
+//  Created by Ayhan Dorman on 05/02/2017.
 //  Copyright © 2017 Modanisa. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Photo.h"
+#import "Flickr.h"
 
-@interface PhotoAPI : NSObject
+@protocol PhotoAPI <NSObject>
 
-+ (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag;
+- (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag;
 
 @end

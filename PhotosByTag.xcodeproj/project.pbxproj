@@ -12,7 +12,7 @@
 		FA6FFB681E460BD1000E7742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB661E460BD1000E7742 /* Main.storyboard */; };
 		FA6FFB6A1E460BD1000E7742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB691E460BD1000E7742 /* Assets.xcassets */; };
 		FA6FFB6D1E460BD1000E7742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6FFB6B1E460BD1000E7742 /* LaunchScreen.storyboard */; };
-		FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7A1E462992000E7742 /* PhotoAPI.m */; };
+		FA6FFB7B1E462992000E7742 /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7A1E462992000E7742 /* Flickr.m */; };
 		FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB7D1E463059000E7742 /* PhotoCell.m */; };
 		FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB801E46343A000E7742 /* HomeViewController.m */; };
 		FA6FFB841E4634CF000E7742 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6FFB831E4634CF000E7742 /* Photo.m */; };
@@ -34,8 +34,8 @@
 		FA6FFB691E460BD1000E7742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6FFB6C1E460BD1000E7742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6FFB6E1E460BD1000E7742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA6FFB791E462992000E7742 /* PhotoAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAPI.h; sourceTree = "<group>"; };
-		FA6FFB7A1E462992000E7742 /* PhotoAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAPI.m; sourceTree = "<group>"; };
+		FA6FFB791E462992000E7742 /* Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flickr.h; sourceTree = "<group>"; };
+		FA6FFB7A1E462992000E7742 /* Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flickr.m; sourceTree = "<group>"; };
 		FA6FFB7C1E463059000E7742 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
 		FA6FFB7D1E463059000E7742 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
 		FA6FFB7F1E46343A000E7742 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -53,6 +53,7 @@
 		FA6FFB9B1E46642E000E7742 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA6FFB9D1E466EE9000E7742 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		FA6FFB9E1E466EE9000E7742 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		FA73F4561E472D1B0047D2F0 /* PhotoAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoAPI.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +146,9 @@
 		FA6FFB781E462972000E7742 /* PhotoAPI */ = {
 			isa = PBXGroup;
 			children = (
-				FA6FFB791E462992000E7742 /* PhotoAPI.h */,
-				FA6FFB7A1E462992000E7742 /* PhotoAPI.m */,
+				FA6FFB791E462992000E7742 /* Flickr.h */,
+				FA6FFB7A1E462992000E7742 /* Flickr.m */,
+				FA73F4561E472D1B0047D2F0 /* PhotoAPI.h */,
 			);
 			path = PhotoAPI;
 			sourceTree = "<group>";
@@ -249,7 +251,7 @@
 				FA6FFB8B1E464A6C000E7742 /* StringOperations.m in Sources */,
 				FA6FFB841E4634CF000E7742 /* Photo.m in Sources */,
 				FA6FFB7E1E463059000E7742 /* PhotoCell.m in Sources */,
-				FA6FFB7B1E462992000E7742 /* PhotoAPI.m in Sources */,
+				FA6FFB7B1E462992000E7742 /* Flickr.m in Sources */,
 				FA6FFB621E460BD0000E7742 /* AppDelegate.m in Sources */,
 				FA6FFB811E46343A000E7742 /* HomeViewController.m in Sources */,
 				FA6FFB5F1E460BD0000E7742 /* main.m in Sources */,
@@ -422,6 +424,7 @@
 				FA6FFB731E460BD1000E7742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
