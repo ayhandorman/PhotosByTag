@@ -11,6 +11,6 @@
 
 @protocol PhotoAPI <NSObject>
 
-- (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag;
+- (NSURLSessionDataTask*) photosByTag:(void (^)(NSArray *photos))getPhotos failure:(void (^)(NSError *error))failure tag:(NSString*)tag page:(int)page;
 
 @end

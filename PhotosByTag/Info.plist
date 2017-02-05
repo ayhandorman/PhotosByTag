@@ -29,7 +29,7 @@
 	<key>FlickrRestServiceUrl</key>
 	<string>api.flickr.com</string>
 	<key>FlickrRestServiceUrlFormat</key>
-	<string>https://api.flickr.com/services/rest/?method=%@&amp;format=json&amp;api_key=%@&amp;tags=%@&amp;nojsoncallback=?</string>
+	<string>https://api.flickr.com/services/rest/?method=%@&amp;format=json&amp;api_key=%@&amp;tags=%@&amp;page=%d&amp;nojsoncallback=?</string>
 	<key>FlickrSecret</key>
 	<string>080f49492105401c</string>
 	<key>LSRequiresIPhoneOS</key>

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorLoading;
 @property (strong, nonatomic) IBOutlet UITableView *tablePhotos;
+@property (strong, nonatomic) IBOutlet UIView *viewNotification;
 
 @end
 
